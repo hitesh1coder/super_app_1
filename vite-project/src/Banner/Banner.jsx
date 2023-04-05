@@ -8,6 +8,9 @@ const Banner = () => {
           <h3>Already have an account?</h3>
           <button className="login_btn">LOGIN</button>
         </div>
+        <div className="banner_content">
+          <h1>Discover new things on Superapp</h1>
+        </div>
       </div>
     </div>
   );

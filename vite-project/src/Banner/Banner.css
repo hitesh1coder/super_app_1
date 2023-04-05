@@ -13,12 +13,18 @@
 }
 .login_content {
   top: 3rem;
-  left: 2rem;
+  left: 3rem;
   position: absolute;
   display: flex;
   color: #fff;
 }
-
+.banner_content {
+  bottom: 5rem;
+  left: 3rem;
+  position: absolute;
+  color: #fff;
+  margin-right: 9rem;
+}
 .login_btn {
   margin-left: 2rem;
   background: #72db73;
@@ -27,5 +33,5 @@
   border: none;
   outline: none;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
