@@ -1,0 +1,109 @@
+.category_main {
+  background: #1e1e1e;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.category_leftcontent {
+  height: 100vh;
+  width: 35vw;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 2rem;
+}
+.category_leftcontent h3 {
+  font-size: 2rem;
+  position: relative;
+  top: 5rem;
+  left: 4rem;
+  color: #72db73;
+  font-weight: 300;
+  font-family: "Single Day", cursive;
+}
+.category_leftcontent h1 {
+  position: relative;
+  max-width: 24vw;
+  top: 6rem;
+  left: 4rem;
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: 2.3rem;
+}
+.selected_categories {
+  max-width: 30vw;
+  position: relative;
+  top: 10rem;
+  left: 4rem;
+  display: flex;
+  color: #fff;
+}
+.selected_gener {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.selected_gener p {
+  background: #148a08;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+}
+.selected_gener p span {
+  margin-left: 2rem;
+}
+.selected_gener p span img {
+  width: 1rem;
+  cursor: pointer;
+}
+/* Right category section  */
+
+.categories {
+  width: 65vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  flex-wrap: wrap;
+  display: flex;
+  width: 45vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.categories_item {
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 25vh;
+  width: 13.5vw;
+}
+.selected {
+  border: 5px solid #148a08;
+}
+.categories_item h2 {
+  margin-bottom: 2rem;
+  margin-left: -4rem;
+}
+.categories_item img {
+  height: 15vh;
+  width: 12vw;
+}
+.next_btn {
+  margin: 1rem 0 0 25rem;
+  padding: 0.6rem 1.3rem;
+  color: #fff;
+  background: #148a08;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

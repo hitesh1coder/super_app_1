@@ -1,14 +1,17 @@
 import React from "react";
-import Register from "./Auth/Register";
-import Banner from "./Banner/Banner";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Components/HomeSection/Home";
 
 const App = () => {
   return (
     <>
-      <div className="App">
-        <Banner />
-        <Register />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Register />} /> */}
+          {/* <Route path="/category" element={<Category />} /> */}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

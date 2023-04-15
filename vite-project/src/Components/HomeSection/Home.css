@@ -1,0 +1,19 @@
+.home_main {
+  background: #1e1e1e;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  gap: 1rem;
+}
+.home_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: 100vh;
+}
+.home_right {
+  width: 35vw;
+  height: 100vh;
+}

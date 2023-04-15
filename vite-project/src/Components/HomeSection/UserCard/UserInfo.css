@@ -1,0 +1,56 @@
+.userinfo {
+  width: 55vw;
+  height: 55vh;
+  background: #3423ce;
+  border-radius: 1rem;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+}
+.image_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+}
+.image_section img {
+  height: 45vh;
+}
+.details_section {
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 35vw;
+  color: #fff;
+}
+
+.user_detail {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+.selected_categorie {
+  display: flex;
+  color: #fff;
+  margin-top: 1rem;
+}
+.selected_genere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 30vw;
+}
+.selected_genere p {
+  background: #9f94ff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.5rem;
+}
+.selected_genere p span {
+  margin-left: 2rem;
+}
+.selected_genere p span img {
+  width: 1rem;
+  cursor: pointer;
+}
