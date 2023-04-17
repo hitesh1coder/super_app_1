@@ -1,37 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./News.css";
 const News = () => {
-  const today = new Date();
+  const [neswData, setNewsData] = useState([]);
 
-  const showTime = today.toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  });
+  const getData = async () => {
+    const data = await fetch(
+      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=af3e4127425f4d08b118380a021857d3"
+    );
+    const result = await data.json();
 
-  const date =
-    today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
+    setNewsData(result.articles[3]);
+    console.log(result.articles[0]);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="news_main">
       <div className="news_section">
-        <div className="news_heading">
+        <div
+          className="news_heading"
+          style={{
+            backgroundImage: `url(${neswData.urlToImage})`,
+            backgroundSize: "cover",
+          }}
+        >
           <div className="news_des">
-            <h1>Want to climb Mount Everest?</h1>
-            <p>
-              {date} | {showTime}
-            </p>
+            <h1>{neswData.title}</h1>
+            <p>{neswData.publishedAt}</p>
           </div>
         </div>
         <div className="news_details">
-          <p>
-            In the years since human beings first reached the summit of Mount
-            Everest in 1953, climbing the world’s highest mountain has changed
-            dramatically. Today, hundreds of mountaineers manage the feat each
-            year thanks to improvements in knowledge, technology, and the
-            significant infrastructure provided by commercially guided
-            expeditions that provide a veritable highway up the mountain for
-            those willing to accept both the......
-          </p>
+          <p>{neswData.content}</p>
         </div>
       </div>
     </div>

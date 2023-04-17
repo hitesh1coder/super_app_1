@@ -26,7 +26,7 @@ const Weather = () => {
   useEffect(() => {
     getData();
   }, []);
-  console.log(weatherData);
+
   return (
     <div className="weather">
       <div className="weather_header">

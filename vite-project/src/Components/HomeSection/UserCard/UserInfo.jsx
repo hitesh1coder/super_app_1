@@ -3,6 +3,7 @@ import "./UserInfo.css";
 
 const UserInfo = () => {
   const user = JSON.parse(localStorage.getItem("userData"));
+  const userGenere = JSON.parse(localStorage.getItem("userGenere"));
 
   return (
     <div className="userinfo">
@@ -15,30 +16,16 @@ const UserInfo = () => {
         <h1>{user.username}</h1>
         <div className="selected_categorie">
           <div className="selected_genere">
-            <p>
-              romance{" "}
-              <span>
-                <img src="/images/close.png" alt="+" />
-              </span>
-            </p>
-            <p>
-              thriller
-              <span>
-                <img src="/images/close.png" alt="+" />
-              </span>
-            </p>
-            <p>
-              action
-              <span>
-                <img src="/images/close.png" alt="+" />
-              </span>
-            </p>
-            <p>
-              action
-              <span>
-                <img src="/images/close.png" alt="+" />
-              </span>
-            </p>
+            {userGenere?.map((value, i) => {
+              return (
+                <p key={i}>
+                  {value}
+                  <span>
+                    <img src="/images/close.png" alt="+" />
+                  </span>
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>
