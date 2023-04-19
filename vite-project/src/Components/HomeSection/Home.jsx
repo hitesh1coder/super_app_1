@@ -9,7 +9,11 @@ const Home = () => {
   const [usernotes, setUsernotes] = useState();
 
   const handleNotesChange = (e) => {
-    setUsernotes(window.localStorage.setItem("userNotes", e.target.value));
+    if (e.target.value === "") {
+      return;
+    } else {
+      setUsernotes(window.localStorage.setItem("userNotes", e.target.value));
+    }
   };
   let note = localStorage.getItem("userNotes");
   console.log(note);
@@ -33,6 +37,9 @@ const Home = () => {
             >
               {note}
             </textarea>
+            <div className="note_icon">
+              <img src="/images/pencil.png" alt="" />
+            </div>
           </div>
         </div>
         <div className="timer_div">

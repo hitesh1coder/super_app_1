@@ -31,28 +31,47 @@
   height: 65vh;
 }
 .notes {
+  z-index: 0;
   border-radius: 1rem;
   background: #f1c75b;
   width: 30vw;
   height: 65vh;
   padding: 1.3rem;
+  position: relative;
 }
 .notes textarea {
   background: transparent;
   border: none;
   outline: none;
-
+  overflow-y: auto;
   letter-spacing: 0.2rem;
   line-height: 2.3rem;
   font-weight: bold;
   font-size: 1rem;
-  /* background-image: repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
     transparent,
-    transparent 2.5rem,
-    #020202 2.5rem,
-    #020202 2.6rem,
-    transparent 2.5rem
-  ); */
+    transparent 2.2rem,
+    #fff 2.2rem,
+    #fff 2.3rem,
+    transparent 2.2rem
+  );
+}
+.note_icon {
+  z-index: 1;
+  bottom: 2rem;
+  right: 2rem;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.note_icon img {
+  width: 1rem;
 }
 .timer_div {
   display: flex;
