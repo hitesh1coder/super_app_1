@@ -1,14 +1,13 @@
 .weather {
-  width: 55vw;
-  height: 35vh;
+  width: 33vw;
+  height: 38%;
   margin-top: 1rem;
   color: #fff;
-
   border-radius: 1rem;
 }
 .weather_header {
   display: flex;
-  height: 8vh;
+  height: 25%;
   justify-content: space-around;
   align-items: center;
   color: #fff;
@@ -16,7 +15,7 @@
   border-radius: 1rem 1rem 0 0;
 }
 .weather_info {
-  height: 26vh;
+  height: 75%;
   background: #101744;
   display: flex;
   flex-direction: row;
@@ -26,8 +25,8 @@
 .condition,
 .temp,
 .wind {
-  width: 18vw;
-  height: 22vh;
+  width: 32%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,24 +34,23 @@
 }
 .condition {
   border-right: 1px solid #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .condition img {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
 }
 .temp {
   border-right: 1px solid #fff;
 }
 .temp h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.7rem;
 }
 .temp_detail {
   display: flex;
 }
 .temp span {
-  margin-right: 1rem;
+  margin-right: 0.7rem;
 }
 
 .air,
@@ -65,5 +63,5 @@
   width: 2rem;
 }
 .humidity {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }

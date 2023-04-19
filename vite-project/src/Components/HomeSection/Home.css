@@ -3,17 +3,65 @@
   display: flex;
   height: 100vh;
   width: 100vw;
+  max-width: 100vw;
   gap: 1rem;
 }
 .home_left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 65vw;
+  width: 70vw;
   height: 100vh;
 }
+.user_info_notes {
+  width: 70vw;
+
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_user,
+.notes {
+  display: flex;
+  flex-direction: column;
+}
+.home_user {
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 65vh;
+}
+.notes {
+  border-radius: 1rem;
+  background: #f1c75b;
+  width: 30vw;
+  height: 65vh;
+  padding: 1.3rem;
+}
+.notes textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  letter-spacing: 0.2rem;
+  line-height: 2.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+  /* background-image: repeating-linear-gradient(
+    transparent,
+    transparent 2.5rem,
+    #020202 2.5rem,
+    #020202 2.6rem,
+    transparent 2.5rem
+  ); */
+}
+.timer_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 30%;
+}
 .home_right {
-  width: 35vw;
+  width: 30vw;
   height: 100vh;
 }

@@ -87,9 +87,6 @@
   width: 13vw;
 }
 .selected {
-  border-radius: 0.8rem;
-  height: 25.8vh;
-  width: 13.7vw;
   pointer-events: none;
   border: 5px solid #148a08;
 }

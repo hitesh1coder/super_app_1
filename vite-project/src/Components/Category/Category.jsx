@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Cards from "./Cards";
 const Category = () => {
   const [select, setSelect] = useState([]);
+
   const [error, setError] = useState(false);
   let navigate = useNavigate();
 
@@ -13,8 +14,6 @@ const Category = () => {
   };
   const removeSelect = (e) => {
     select.pop(e);
-    setsetIsSelected(false);
-    console.log(select);
   };
 
   const handleSubmitSelection = () => {

@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import UserInfo from "../HomeSection/UserCard/UserInfo";
 import Weather from "../HomeSection/Weather/Weather";
 import News from "../HomeSection/News/News";
+import Timer from "./Timer/Timer";
 
 const Home = () => {
+  const [usernotes, setUsernotes] = useState();
+
+  const handleNotesChange = (e) => {
+    setUsernotes(window.localStorage.setItem("userNotes", e.target.value));
+  };
+  let note = localStorage.getItem("userNotes");
+  console.log(note);
   return (
     <div className="home_main">
       <div className="home_left">
-        <UserInfo />
-        <Weather />
+        <div className="user_info_notes">
+          <div className="home_user">
+            <UserInfo />
+            <Weather />
+          </div>
+          <div className="notes">
+            <h1>All Notes</h1>
+            <textarea
+              value={usernotes}
+              onChange={handleNotesChange}
+              name="notes"
+              id="notes"
+              cols="50"
+              rows="10"
+            >
+              {note}
+            </textarea>
+          </div>
+        </div>
+        <div className="timer_div">
+          <Timer />
+        </div>
       </div>
       <div className="home_right">
         <News />
