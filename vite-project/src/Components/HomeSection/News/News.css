@@ -1,13 +1,14 @@
 .news_main {
   display: flex;
-  height: 100vh;
+  height: 95vh;
   width: 28vw;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 1rem;
   justify-content: center;
 }
 .news_section {
-  min-height: 92vh;
-  height: 92vh;
+  min-height: 88vh;
+  height: 88vh;
   width: 28vw;
   border-radius: 1rem;
   display: flex;

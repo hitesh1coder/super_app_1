@@ -15,7 +15,6 @@ const News = () => {
   useEffect(() => {
     getData();
   }, []);
-
   return (
     <div className="news_main">
       <div className="news_section">

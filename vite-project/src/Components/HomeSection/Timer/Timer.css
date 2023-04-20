@@ -4,18 +4,50 @@
   margin-left: 2.7rem;
   background: #1e2343;
   border-radius: 1rem;
-  border: 1px solid green;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .timer {
-  border: 1px solid green;
   width: 40%;
   height: 100%;
 }
+.timer_container {
+  margin: 0.5rem auto;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: #191e39;
+  box-shadow: -3px -7px 16px rgba(95, 88, 88, 0.23),
+    inset 0px 6px 26px rgba(0, 0, 0, 0.61);
+
+  display: grid;
+  place-items: center;
+}
+.outer_cirle {
+  width: 9.8rem;
+  height: 9.8rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.inner_circle {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: #191e39;
+  display: grid;
+  place-items: center;
+}
+.clock_container {
+  color: white;
+}
+.clock_container p {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
 .set_timer {
-  border: 1px solid green;
   width: 60%;
   height: 100%;
   display: flex;

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 import UserInfo from "../HomeSection/UserCard/UserInfo";
 import Weather from "../HomeSection/Weather/Weather";
 import News from "../HomeSection/News/News";
 import Timer from "./Timer/Timer";
+import Entertainment from "../EntainMent/Entertainment";
 
 const Home = () => {
   const [usernotes, setUsernotes] = useState();
@@ -48,6 +50,9 @@ const Home = () => {
       </div>
       <div className="home_right">
         <News />
+        <Link to="/entertainment">
+          <button className="browes_btn">Browes</button>
+        </Link>
       </div>
     </div>
   );
