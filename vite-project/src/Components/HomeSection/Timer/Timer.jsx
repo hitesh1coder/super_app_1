@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from "react";
-
+import audioTune from "./call-to-attention-123107.mp3";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./Timer.css";
 
 const Timer = () => {
   const [inputHour, setInputHour] = useState(0);
   const [inputMinutes, setInputMinutes] = useState(0);
   const [inputSeconds, setInputSeconds] = useState(0);
+  const [timerIsStart, setTimerIsStart] = useState(false);
   const [time, setTime] = useState(0);
 
-  const [progress, setProgress] = useState(time);
-
+  const playsound = () => {
+    new Audio(audioTune).play();
+  };
   useEffect(() => {
     if (time > 0) {
       const interval = setInterval(() => {
         setTime((time) => time - 1);
-        setProgress((progress) => progress - 1);
       }, 1000);
       return () => clearInterval(interval);
+    } else {
+      setInputMinutes(0);
+      setInputHour(0);
+      setInputSeconds(0);
+      playsound();
     }
   }, [time]);
 
@@ -24,10 +31,10 @@ const Timer = () => {
     inputHour * 60 * 60 + inputMinutes * 60 + inputSeconds;
 
   const startTimer = () => {
-    setProgress(100);
     setTime(totalInputTimeInSeconds);
+    setTimerIsStart(true);
   };
-  const getTime = (totalTimeInSeconds) => {
+  const showTimer = (totalTimeInSeconds) => {
     const hour = Math.floor(totalTimeInSeconds / 3600);
     totalTimeInSeconds %= 3600;
     const min = Math.floor(totalTimeInSeconds / 60);
@@ -36,6 +43,7 @@ const Timer = () => {
       sec < 10 ? "0" + sec : sec
     }`;
   };
+
   const increseHour = () => {
     if (inputHour < 12) setInputHour(inputHour + 1);
   };
@@ -96,7 +104,7 @@ const Timer = () => {
     <div className="timer_main">
       <div className="timer">
         <div className="timer_container">
-          <div
+          {/* <div
             className="outer_cirle"
             style={{
               background: `conic-gradient(
@@ -105,10 +113,18 @@ const Timer = () => {
           >
             <div className="inner_circle">
               <div className="clock_container">
-                <p>{getTime(time)}</p>
+                <p>{showTimer(time)}</p>
               </div>
             </div>
-          </div>
+          </div> */}
+          <CountdownCircleTimer
+            isPlaying={timerIsStart ? true : false}
+            rotation="counterclockwise"
+            duration={totalInputTimeInSeconds}
+            colors={["#FF6A6A", "transparent"]}
+          >
+            {({ remainingTime }) => <p> {showTimer(time)}</p>}
+          </CountdownCircleTimer>
         </div>
       </div>
       <div className="set_timer">
@@ -117,7 +133,7 @@ const Timer = () => {
           <p>Minutes</p>
           <p>Seconds</p>
         </div>
-        <div className="increse_btn">
+        <div className={timerIsStart ? "increse_btn disable" : "increse_btn"}>
           <img onClick={increseHour} src="/images/increse.png" alt="" />
 
           <img onClick={increseMinute} src="/images/increse.png" alt="" />
@@ -127,7 +143,7 @@ const Timer = () => {
         <div className="timer_number">
           <h2>{inputHour}</h2> :<h2>{inputMinutes}</h2> :<h2>{inputSeconds}</h2>
         </div>
-        <div className="decrese_btn">
+        <div className={timerIsStart ? "decrese_btn disable" : "decrese_btn"}>
           <img onClick={decreaseHour} src="/images/decrease.png" alt="" />
 
           <img onClick={decreaseMinute} src="/images/decrease.png" alt="" />
