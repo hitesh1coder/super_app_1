@@ -10,7 +10,6 @@ const News = () => {
     const result = await data.json();
 
     setNewsData(result.articles[3]);
-    console.log(result.articles[0]);
   };
   useEffect(() => {
     getData();

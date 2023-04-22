@@ -43,16 +43,20 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-.selected_gener p {
-  background: #148a08;
-  padding: 0.6rem 1rem;
-  border-radius: 1rem;
+.chips {
+  background: green;
+  border-radius: 12px;
+  width: 100px;
+  color: white;
+  border: none;
+  padding: 6px;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 10px;
 }
-.selected_gener p span {
-  margin-left: 2rem;
-}
-.selected_gener p span img {
-  width: 1rem;
+.chips span {
+  color: black;
+  margin-left: 0.9rem;
   cursor: pointer;
 }
 /* Right category section  */

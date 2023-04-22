@@ -44,9 +44,12 @@
 .movies_container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.movies_container img {
+
+.images img {
+  border-radius: 1rem;
   cursor: pointer;
-  width: 18rem;
-  height: 9rem;
+  width: 16rem;
+  height: 8rem;
 }

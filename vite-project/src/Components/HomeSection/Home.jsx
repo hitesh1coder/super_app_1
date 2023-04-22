@@ -5,7 +5,6 @@ import UserInfo from "../HomeSection/UserCard/UserInfo";
 import Weather from "../HomeSection/Weather/Weather";
 import News from "../HomeSection/News/News";
 import Timer from "./Timer/Timer";
-import Entertainment from "../EntainMent/Entertainment";
 
 const Home = () => {
   const [usernotes, setUsernotes] = useState();
@@ -18,7 +17,7 @@ const Home = () => {
     }
   };
   let note = localStorage.getItem("userNotes");
-  console.log(note);
+
   return (
     <div className="home_main">
       <div className="home_left">
@@ -50,7 +49,7 @@ const Home = () => {
       </div>
       <div className="home_right">
         <News />
-        <Link to="/entertainment">
+        <Link to="/movies">
           <button className="browes_btn">Browes</button>
         </Link>
       </div>

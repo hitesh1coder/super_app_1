@@ -104,24 +104,13 @@ const Timer = () => {
     <div className="timer_main">
       <div className="timer">
         <div className="timer_container">
-          {/* <div
-            className="outer_cirle"
-            style={{
-              background: `conic-gradient(
-                #FF6A6A ${progress}%, transparent ${progress}%)`,
-            }}
-          >
-            <div className="inner_circle">
-              <div className="clock_container">
-                <p>{showTimer(time)}</p>
-              </div>
-            </div>
-          </div> */}
           <CountdownCircleTimer
             isPlaying={timerIsStart ? true : false}
             rotation="counterclockwise"
+            strokeWidth={5}
             duration={totalInputTimeInSeconds}
-            colors={["#FF6A6A", "transparent"]}
+            colors={["#FF6A6A", "#191E39"]}
+            trailColor="#191E39"
           >
             {({ remainingTime }) => <p> {showTimer(time)}</p>}
           </CountdownCircleTimer>

@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Category.css";
 import { categories } from "./CategoriesData.jsx";
 import { useNavigate } from "react-router-dom";
+
 import Cards from "./Cards";
+import Chips from "./Chips";
 const Category = () => {
   const [select, setSelect] = useState([]);
-
   const [error, setError] = useState(false);
   let navigate = useNavigate();
 
@@ -32,20 +33,7 @@ const Category = () => {
         <h1>Choose your entertainment category</h1>
         <div className="selected_categories">
           <div className="selected_gener">
-            {select?.map((value, i) => {
-              return (
-                <p key={i}>
-                  {value}
-                  <span>
-                    <img
-                      onClick={() => removeSelect(value)}
-                      src="/images/close.png"
-                      alt="+"
-                    />
-                  </span>
-                </p>
-              );
-            })}
+            <Chips select={select} setSelect={setSelect} />
           </div>
         </div>
       </div>
