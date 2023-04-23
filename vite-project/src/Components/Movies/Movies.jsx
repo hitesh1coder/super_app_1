@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Movies.css";
 const genere = JSON.parse(localStorage.getItem("userGenere"));
-// const gener1 = "action";
-// const gener2 = genere[2];
-// const gener3 = genere[0];
-// console.log(gener1);
+
 const Movies = () => {
   const [gener1Data, setGener1Data] = useState([]);
   const [gener2Data, setGener2Data] = useState([]);

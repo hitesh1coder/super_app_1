@@ -8,8 +8,8 @@ const News = () => {
       "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=af3e4127425f4d08b118380a021857d3"
     );
     const result = await data.json();
-
-    setNewsData(result.articles[3]);
+    let artical = result.articles[3];
+    setNewsData(artical);
   };
   useEffect(() => {
     getData();
