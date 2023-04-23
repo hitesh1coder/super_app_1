@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Movies.css";
 const genere = JSON.parse(localStorage.getItem("userGenere"));
-const gener1 = genere[1];
-const gener2 = genere[2];
-const gener3 = genere[0];
-console.log(gener1);
+// const gener1 = "action";
+// const gener2 = genere[2];
+// const gener3 = genere[0];
+// console.log(gener1);
 const Movies = () => {
   const [gener1Data, setGener1Data] = useState([]);
   const [gener2Data, setGener2Data] = useState([]);
@@ -13,7 +13,7 @@ const Movies = () => {
   useEffect(() => {
     const getGenre1Data = async () => {
       await fetch(
-        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${gener1}`
+        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${genere[0]}`
       )
         .then((response) => response.json())
         .then((response) => setGener1Data(response.Search.splice(4, 4)))
@@ -21,7 +21,7 @@ const Movies = () => {
     };
     const getGenre2Data = async () => {
       await fetch(
-        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${gener2}`
+        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${genere[1]}`
       )
         .then((response) => response.json())
         .then((response) => setGener2Data(response.Search.splice(4, 4)))
@@ -29,7 +29,7 @@ const Movies = () => {
     };
     const getGenre3Data = async () => {
       await fetch(
-        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${gener3}`
+        `https://www.omdbapi.com/?i=tt3896198&apikey=d20a227b&s=${genere[2]}`
       )
         .then((response) => response.json())
         .then((response) => setGener3Data(response.Search.splice(4, 4)))
@@ -52,7 +52,7 @@ const Movies = () => {
       <div className="category_container">
         <h4>Entertainment according to your choice</h4>
         <div className="collection_container ">
-          <p>{gener1}</p>
+          <p>{genere[0]}</p>
           <div className="movies_container">
             {gener1Data?.map((item, id) => {
               return (
@@ -64,7 +64,7 @@ const Movies = () => {
           </div>
         </div>
         <div className="collection_container ">
-          <p>{gener2}</p>
+          <p>{genere[1]}</p>
           <div className="movies_container">
             {gener2Data?.map((item, id) => {
               return (
@@ -76,7 +76,7 @@ const Movies = () => {
           </div>
         </div>
         <div className="collection_container ">
-          <p>{gener3}</p>
+          <p>{genere[2]}</p>
           <div className="movies_container">
             {gener3Data?.map((item, id) => {
               return (
