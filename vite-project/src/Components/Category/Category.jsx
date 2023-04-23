@@ -13,9 +13,6 @@ const Category = () => {
   const handleSelect = (elem) => {
     setSelect((select) => [...select, elem]);
   };
-  const removeSelect = (e) => {
-    select.pop(e);
-  };
 
   const handleSubmitSelection = () => {
     if (select.length < 3) {

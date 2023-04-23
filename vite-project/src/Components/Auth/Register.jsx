@@ -12,8 +12,6 @@ const Register = () => {
     handleSubmit,
   } = useForm();
 
-  const [isChecked, setIsChecked] = useState(false);
-  const [formError, setFormError] = useState({});
   const onSubmit = (data) => {
     window.localStorage.setItem("userData", JSON.stringify(data));
     navigate("/category");
