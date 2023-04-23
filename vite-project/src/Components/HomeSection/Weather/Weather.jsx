@@ -17,7 +17,7 @@ const Weather = () => {
 
   const getData = async () => {
     const data = await fetch(
-      "http://api.weatherapi.com/v1/current.json?key=b9f9ec7c8d9049b99ec52929231404&q=jaunpur&aqi=no"
+      "https://api.weatherapi.com/v1/current.json?key=b9f9ec7c8d9049b99ec52929231404&q=jaunpur&aqi=no"
     );
     const result = await data.json();
 
