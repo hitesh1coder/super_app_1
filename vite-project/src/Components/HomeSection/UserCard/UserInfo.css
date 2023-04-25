@@ -44,13 +44,28 @@
 }
 .selected_genere p {
   background: #9f94ff;
-  padding: 0.3rem 1.1rem;
+  padding: 0.3rem 1.4rem;
   border-radius: 1.5rem;
 }
-.selected_genere p span {
-  margin-left: 0.5rem;
-}
-.selected_genere p span img {
-  width: 1rem;
-  cursor: pointer;
+
+/* Responcive Design CSS  */
+
+@media screen and (max-width: 430px) {
+  .userinfo {
+    width: 96vw;
+  }
+  .image_section {
+    width: 30vw;
+  }
+  .details_section {
+    width: 65vw;
+    margin-left: 1rem;
+  }
+  .user_detail {
+    letter-spacing: 0.1rem;
+  }
+  .selected_genere {
+    max-width: 60vw;
+    margin-top: 1rem;
+  }
 }

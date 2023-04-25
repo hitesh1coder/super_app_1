@@ -85,3 +85,23 @@
   font-weight: bold;
   color: #72db73;
 }
+
+/* responcive css */
+
+@media screen and (max-width: 430px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .register {
+    width: 100vw;
+    height: 65vh;
+  }
+  .form_header {
+    height: 15vh;
+  }
+  .form_section {
+    height: 50vh;
+    width: 85vw;
+  }
+}

@@ -53,3 +53,25 @@
   width: 16rem;
   height: 8rem;
 }
+/* responcive css */
+
+@media screen and (max-width: 430px) {
+  .entertainment_container,
+  .category_container,
+  .collection_container {
+    height: auto;
+  }
+  .movies_container {
+    display: flex;
+    height: 17rem;
+    flex-wrap: wrap;
+  }
+  .images {
+    width: 12rem;
+    height: 8rem;
+  }
+  .images img {
+    width: 11rem;
+    height: 7rem;
+  }
+}

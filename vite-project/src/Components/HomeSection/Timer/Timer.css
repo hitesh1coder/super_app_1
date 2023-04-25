@@ -4,7 +4,6 @@
   margin-left: 2.7rem;
   background: #1e2343;
   border-radius: 1rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,4 +95,16 @@
   border-radius: 1.4rem;
   border: none;
   outline: none;
+}
+
+/* Responcive Design CSS  */
+
+@media screen and (max-width: 430px) {
+  .timer_main {
+    width: 96vw;
+    height: 42vh;
+    margin-left: 0;
+    flex-direction: column;
+    border: 1px solid rgb(198, 198, 198);
+  }
 }

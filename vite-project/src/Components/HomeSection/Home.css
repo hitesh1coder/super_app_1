@@ -10,7 +10,7 @@
   width: 70vw;
   height: 100vh;
 }
-.user_info_notes {
+.user_info {
   width: 70vw;
 
   height: 70%;
@@ -97,4 +97,41 @@
   background: #148a08;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+}
+
+/* Responcive Design CSS  */
+
+@media screen and (max-width: 430px) {
+  .home_main {
+    height: 210vh;
+    flex-direction: column;
+  }
+  .home_left {
+    width: 100vw;
+    height: 145vh;
+  }
+  .user_info {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .home_user {
+    width: 100vw;
+    height: 70vh;
+  }
+  .notes {
+    width: 96vw;
+    height: 30vh;
+  }
+  .timer_div {
+    height: 45vh;
+    width: 100vw;
+  }
+  .home_right {
+    height: 55vh;
+    width: 100vw;
+  }
+  .browes_btn {
+    margin: 1rem;
+  }
 }

@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="home_main">
       <div className="home_left">
-        <div className="user_info_notes">
+        <div className="user_info">
           <div className="home_user">
             <UserInfo />
             <Weather />

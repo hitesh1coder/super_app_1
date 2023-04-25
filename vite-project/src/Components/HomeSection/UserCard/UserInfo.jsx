@@ -17,14 +17,7 @@ const UserInfo = () => {
         <div className="selected_categorie">
           <div className="selected_genere">
             {userGenere?.map((value, i) => {
-              return (
-                <p key={i}>
-                  {value}
-                  <span>
-                    <img src="/images/close.png" alt="+" />
-                  </span>
-                </p>
-              );
+              return <p key={i}>{value}</p>;
             })}
           </div>
         </div>

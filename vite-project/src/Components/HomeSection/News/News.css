@@ -7,7 +7,6 @@
   justify-content: center;
 }
 .news_section {
-  min-height: 88vh;
   height: 88vh;
   width: 28vw;
   border-radius: 1rem;
@@ -52,4 +51,36 @@
 }
 .news_details p {
   line-height: 1.7rem;
+}
+
+/* Responcive Design CSS  */
+
+@media screen and (max-width: 430px) {
+  .news_main {
+    width: 96vw;
+    height: 55vh;
+  }
+  .news_section {
+    width: 96vw;
+    height: 100%;
+    margin-right: 1rem;
+  }
+  .news_heading {
+    width: 96vw;
+    height: 25vh;
+  }
+  .news_des {
+    width: 100%;
+    height: 12vh;
+  }
+  .news_des h1 {
+    line-clamp: 1;
+  }
+  .news_des p {
+    margin-bottom: 0.3rem;
+  }
+  .news_details {
+    width: 96vw;
+    height: 25vh;
+  }
 }

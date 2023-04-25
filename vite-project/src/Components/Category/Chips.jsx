@@ -5,7 +5,7 @@ const Chips = ({ name, setSelect, select }) => {
     setSelect([...select]);
   };
   return (
-    <div style={{ width: "40vw" }}>
+    <div style={{ width: "58vw" }}>
       {select?.map((category) => (
         <button className="chips" onClick={handleClick}>
           {category}
