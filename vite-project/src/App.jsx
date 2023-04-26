@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./Components/HomeSection/Home";
 import Register from "./Components/Auth/Register";
 import Category from "./Components/Category/Category";
@@ -13,6 +13,7 @@ const App = () => {
           <Route path="/category" element={<Category />} />
           <Route path="/home" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </>
