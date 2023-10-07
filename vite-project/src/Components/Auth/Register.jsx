@@ -51,7 +51,7 @@ const Register = () => {
                   placeholder="UserName"
                   {...register("username", {
                     required: true,
-                    pattern: /^[A-Za-z][A-Za-z0-9_]{7,29}$/,
+                    pattern: ^[A-Za-z]\\w{5,29}$,
                   })}
                 />
                 <span>
