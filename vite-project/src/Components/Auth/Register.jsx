@@ -58,7 +58,7 @@ const Register = () => {
                   {errors.username?.type === "required" &&
                     "username is required"}
                   {errors.username?.type === "pattern" &&
-                    "username first char should be a letter and should be 8-20 charecter"}
+                    "username must have an uppercase letter, a lowercase letter, a number, an underscore, or a hyphen"}
                 </span>
               </div>
               <div className="input_div">
